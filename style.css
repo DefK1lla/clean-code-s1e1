@@ -152,6 +152,10 @@ button {
   display: none
 }
 
+.task__input_new {
+  display: block;
+}
+
 .task__input_show {
   display: inline-block;
   width: 224px
