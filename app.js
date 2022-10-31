@@ -86,7 +86,7 @@ var editTask = function () {
   var editInput = listItem.querySelector('.js-input');
   var label = listItem.querySelector(".js-title");
   var editBtn = listItem.querySelector(".js-edit");
-  var containsClass = listItem.classList.contains("editMode");
+  var containsClass = listItem.classList.contains("js-edit-mode");
   //If class of the parent is .editmode
   if (containsClass) {
 
@@ -100,7 +100,9 @@ var editTask = function () {
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("editMode");
+  listItem.classList.toggle("js-edit-mode");
+  listItem.querySelector('.js-input').classList.toggle('task__input_show');
+  listItem.querySelector('.js-title').classList.toggle('task__title_hide');
 };
 
 
@@ -122,6 +124,7 @@ var taskCompleted = function () {
 
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
+  listItem.querySelector('.js-title').classList.add('task__title_line-through');
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
@@ -134,6 +137,7 @@ var taskIncomplete = function () {
   //When the checkbox is unchecked
   //Append the task list item to the #incompleteTasks.
   var listItem = this.parentNode;
+  listItem.querySelector('.js-title').classList.remove('task__title_line-through');
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
 }
