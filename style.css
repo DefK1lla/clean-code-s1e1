@@ -91,9 +91,11 @@ button {
 }
 
 @media (max-width:768px) {
+
   .matrix {
     text-align: center;
   }
+
 }
 
 .content {
