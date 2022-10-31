@@ -18,14 +18,14 @@
           <label for="new-task">Add Item</label>
         </h3>
         <div class="task__create">
-          <input class="input-text task__input task__input_new" id="new-task" type="text">
+          <input class="input-text task__input task__input_new js-input-new" type="text">
           <button class="btn btn_add js-add">Add</button>
         </div>
       </div>
     </section>
     <section class="section">
       <h3 class="section__title">Todo</h3>
-      <ul class="tasks" id="incompleteTasks">
+      <ul class="tasks js-incomplete">
         <li class="task">
           <input class="task__checkbox js-checkbox" type="checkbox">
           <p class="task__title js-title">Pay Bills</p>
@@ -48,7 +48,7 @@
     </section>
     <section class="section">
       <h3 class="section__title">Completed</h3>
-      <ul class="tasks" id="completed-tasks">
+      <ul class="tasks js-completed">
         <li class="task">
           <input class="task__checkbox js-checkbox" type="checkbox" checked>
           <p class="task__title task__title_line-through js-title">See the Doctor</p>
