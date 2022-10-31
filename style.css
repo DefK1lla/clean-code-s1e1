@@ -74,7 +74,7 @@ button {
   text-transform: uppercase;
 }
 
-.matrix {
+.header {
   width: 500px;
   margin: 0 auto;
 
@@ -82,17 +82,17 @@ button {
   text-align: right;
 }
 
-.matrix__img {
+.header__img {
   width: 100%;
 }
 
-.matrix__link {
+.header__link {
   font-family: "fantasy", cursive;
 }
 
 @media (max-width:768px) {
 
-  .matrix {
+  .header {
     text-align: center;
   }
 
